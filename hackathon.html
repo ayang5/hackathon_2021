@@ -3,6 +3,7 @@
     <head>
         <title>Meal Calories Calculator</title>
         <link rel="stylesheet" href  = "styles.css">
+        <script type = "text/javaScript" src = "algorithm.js";></script>
     </head>
     <body>
         <section id="scroll">
@@ -30,6 +31,25 @@
           </div>
         
         </section>
-        
+        <script type = "text/javaScript">
+            var a = document.getElementById("FoodChoice");
+            var b = document.getElementById("ServSize");
+            var foodChoice;
+            var servingSize;
+            function fChoice(){
+                foodChoice = a.options[a.selectedIndex].value;
+                console.log(foodChoice);
+            }
+            function sSize(){
+                servingSize = b.options[b.selectedIndex].value;
+                console.log(servingSize)
+            }
+            document.getElementById("submit").onclick = function(){
+                fChoice();
+                sSize();
+                console.log("hi");
+                console.log(Protein1(foodChoice, servingSize));
+            }
+        </script>
     </body>
 </html>
