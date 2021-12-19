@@ -134,15 +134,14 @@
                 saMinus.style.marginTop = "-8px";
                 document.getElementById("foodBox").appendChild(saMinus);
                 var servAmount = document.createElement("div");
-                servAmount.id = "servAmount" + count;
+                servAmount.id = "servAmount"+count;
                 servAmount.style.position="absolute";
                 servAmount.style.left="17.8vw";
-                servAmount.id = "servAmount";
-                servAmount.innerHTML = 1;
+                servAmount.innerHTML = "1";
                 servAmount.style.marginTop = "-0.5em";
                 document.getElementById("foodBox").appendChild(servAmount)
-                document.getElementById("saPlus"+count).addEventListener("click",plusSA());
-                document.getElementById("saMinus"+count).addEventListener("click",minusSA());
+                document.getElementById("saPlus"+count).addEventListener("click",plusSA);
+                document.getElementById("saMinus"+count).addEventListener("click",minusSA);
                 
             }
             
@@ -165,14 +164,18 @@
                 document.getElementById("foodBox").appendChild(select);
             }
             function minusSA(){
-                var x = parseInt(document.getElementById("servAmount"+count).innerHTML)-1;
+                console.log(this.id);
+                var g = this.id.substring(this.id.length-1);
+                console.log(g);
+                var x = parseInt(document.getElementById("servAmount"+g).innerHTML)-1;
                 console.log(x);
-                document.getElementById("servAmount"+count).innerHTML = x;
+                document.getElementById("servAmount"+g).innerHTML = x;
             }
             function plusSA(){
-                var x = parseInt(document.getElementById("servAmount"+count).innerHTML)+1;
+                var g = this.id.substring(this.id.length-1);
+                var x = parseInt(document.getElementById("servAmount"+g).innerHTML)+1;
                 console.log(x);
-                document.getElementById("servAmount"+count).innerHTML = x;
+                document.getElementById("servAmount"+g).innerHTML = x;
             }
             function calculateFood(){
                 for(let i = 0; i<count;i++){
