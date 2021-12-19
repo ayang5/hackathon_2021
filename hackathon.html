@@ -31,7 +31,22 @@
           </div>
         
         </section>
-        
+        <section>
+            <div class="box">
+                <h2>Category</h2>
+                <div class="item">
+                    <div class="dropdown">
+
+                    </div>
+                </div>
+                <div class="servingamount">
+                    
+                </div>
+            </div>
+            <div class="calories">
+                <h2>Total Calories</h2>
+            </div>
+        </section>
 </body>
 <script type = "text/javaScript">
             var count = 0;
@@ -59,13 +74,13 @@
             document.getElementById("gCard").onclick = function(){
                 type = "gCard";
                 values = [];
-                newDropdown()
+                newDropdown(values)
             }
             function newDropdown(values) {
  
                 var select = document.createElement("select");
                 select.name = "foodChoice" + count;
-                select.id = "pets" + count;
+                select.id = "foodChoice" + count;
 
                 for (const val of values) {
                      var option = document.createElement("option");
@@ -76,23 +91,15 @@
 
                 document.getElementById("body").appendChild(select);
             }
-            var a = document.getElementById("FoodChoice");
+            var a = document.getElementById("foodChoice");
             var b = document.getElementById("ServSize");
-            var foodChoice;
-            var servingSize;
-            function fChoice(){
-                foodChoice = a.options[a.selectedIndex].value;
-                console.log(foodChoice);
-            }
-            function sSize(){
-                servingSize = b.options[b.selectedIndex].value;
-                console.log(servingSize)
-            }
-            document.getElementById("submit").onclick = function(){
-                fChoice();
-                sSize();
+            var fChoice;
+            var sSize;
+            function calculateFood(){
+                fChoice = a.options[a.selectedIndex].value;
+                sSize = b.options[b.selectedIndex].value;
                 console.log("hi");
-                console.log(Protein1(foodChoice, servingSize));
+                console.log(Protein1(fChoice, sSize));
             }
         </script>
 </html>
