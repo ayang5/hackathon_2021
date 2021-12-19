@@ -57,30 +57,45 @@
             var type;
             document.getElementById("pCard").onclick = function(){
                 type = "pCard";
-                values = ["1","2","3","4"];
-                newDropdown(values)
+                values = ["Chicken", "Lamb", "Steak", "Beef", "Salmon", "Pork", "Egg", "Tofu"];
+                newFoodItem(values)
             }           
             document.getElementById("vCard").onclick = function(){
                 type = "vCard";
-                values = [];
-                newDropdown(values);
+                values = ["Brussel Sprouts", "Chinese Cabbage", "Lettuce", "Carrots", "Celery", "Potatoes","Broccoli"];
+                newFoodItem(values);
             }
             document.getElementById("fCard").onclick = function(){
                 type = "fCard";
-                values = [];
-                newDropdown(values);
+                values = ["Apples","Oranges", "Bananas","Kiwi", "Strawberries", "Tomatoes", "Blueberries", "Grapes"];
+                newFoodItem(values);
             }
             document.getElementById("dCard").onclick = function(){
                 type = "dCard";
                 values = [];
-                newDropdown(values);
+                newFoodItem(values);
             }
             document.getElementById("gCard").onclick = function(){
                 type = "gCard";
                 values = [];
-                newDropdown(values)
+                newFoodItem(values)
             }
-            function newDropdown(values) {
+            function newFoodItem(values){
+                var box = document.createElement("box")
+                box.name = "foodBox" + count;
+                box.classname = "foodBox";
+                box.id = "foodBox" + count;
+
+                document.getElementById("foodSelection").appendChild("foodSection")
+                foodDropdown(values);
+
+            }
+            function foodInformation(type){
+                if(type == "pCard"){
+                    Protein1()
+                }
+            }
+            function foodDropdown(values) {
  
                 var select = document.createElement("select");
                 select.name = "foodChoice" + count;
