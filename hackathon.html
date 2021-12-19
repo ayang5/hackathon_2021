@@ -107,16 +107,6 @@
                 servAmountLabel.style.left = "15vw";
                 servAmountLabel.style.marginTop = "-30px";
                 document.getElementById("foodBox"+count).appendChild(servAmountLabel);
-                var saMinus = document.createElement("button");
-                saMinus.id = "saMinus"+count;
-                saMinus.innerHTML = "-";
-                saMinus.style.width="1.5em";
-                saMinus.style.height="1.5em";
-                saMinus.style.position = "absolute";
-                saMinus.style.left = "15vw";
-                saMinus.style.marginTop = "-8px";
-                document.getElementById("foodBox"+count).appendChild(saMinus);
-                document.getElementById("saMinus"+count).addEventListener("click",minusSA());
                 var saPlus = document.createElement("button");
                 saPlus.id = "saPlus"+count;
                 saPlus.innerHTML = "+";
@@ -126,15 +116,24 @@
                 saPlus.style.left = "20vw";
                 saPlus.style.marginTop = "-8px";
                 document.getElementById("foodBox"+count).appendChild(saPlus);
-                document.getElementById("saPlus"+count).addEventListener("click",plusSa());
+                var saMinus = document.createElement("button");
+                saMinus.id = "saMinus"+count;
+                saMinus.innerHTML = "-";
+                saMinus.style.width="1.5em";
+                saMinus.style.height="1.5em";
+                saMinus.style.position = "absolute";
+                saMinus.style.left = "15vw";
+                saMinus.style.marginTop = "-8px";
+                document.getElementById("foodBox"+count).appendChild(saMinus);
                 var servAmount = document.createElement("div");
                 servAmount.id = "servAmount" + count;
                 servAmount.style.position="absolute";
                 servAmount.style.right="12vw";
                 servAmount.id = "servAmount";
-                servAmount.innerText = "1";
+                servAmount.innerHTML = 1;
                 document.getElementById("foodBox"+count).appendChild(servAmount)
-
+                document.getElementById("saPlus"+count).addEventListener("click",plusSA());
+                document.getElementById("saMinus"+count).addEventListener("click",minusSA());
             }
             
             function foodDropdown(values) {
@@ -156,14 +155,14 @@
                 document.getElementById("foodBox"+count).appendChild(select);
             }
             function minusSA(){
-                var x = parseInt(document.getElementById("servAmount"+count));
+                var x = document.getElementById("servAmount"+count);
                 console.log(x);
-                document.getElementById("servAmount"+count).innerText = x-1;
+                document.getElementById("servAmount"+count).innerHTML = x-1;
             }
             function plusSA(){
-                var x = parseInt(document.getElementById("servAmount"+count));
+                var x = document.getElementById("servAmount"+count);
                 console.log(x);
-                document.getElementById("servAmount"+count).innerText = x+1;
+                document.getElementById("servAmount"+count).innerHTML = x+1;
             }
             function calculateFood(){
                 for(var i = 0; i<count;i++){
