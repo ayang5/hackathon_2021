@@ -162,9 +162,11 @@
                 console.log(this.id);
                 var g = this.id.substring(this.id.length-1);
                 console.log(g);
+                if(parseInt(document.getElementById("servAmount"+g).innerHTML)>=1){
                 var x = parseInt(document.getElementById("servAmount"+g).innerHTML)-1;
                 console.log(x);
                 document.getElementById("servAmount"+g).innerHTML = x;
+                }
             }
             function plusSA(){
                 var g = this.id.substring(this.id.length-1);
