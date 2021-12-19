@@ -56,27 +56,27 @@
             var count = 0;
             var type;
             document.getElementById("pCard").onclick = function(){
-                type = "pCard";
+                type = "Protein";
                 values = ["Chicken", "Lamb", "Steak", "Beef", "Salmon", "Pork", "Egg", "Tofu"];
                 newFoodItem(values)
             }           
             document.getElementById("vCard").onclick = function(){
-                type = "vCard";
+                type = "Vegetables";
                 values = ["Brussel Sprouts", "Chinese Cabbage", "Lettuce", "Carrots", "Celery", "Potatoes","Broccoli", "Beans"];
                 newFoodItem(values);
             }
             document.getElementById("fCard").onclick = function(){
-                type = "fCard";
+                type = "Fruits";
                 values = ["Apples","Oranges", "Bananas","Kiwi", "Strawberries", "Tomatoes", "Blueberries", "Grapes"];
                 newFoodItem(values);
             }
             document.getElementById("dCard").onclick = function(){
-                type = "dCard";
+                type = "Dairy";
                 values = ["Milk", "Yogurt"];
                 newFoodItem(values);
             }
             document.getElementById("gCard").onclick = function(){
-                type = "gCard";
+                type = "Grains";
                 values = ["White Rice", "Brown Rice", "Bread", "Pasta", "Quinoa"];
                 newFoodItem(values)
             }
@@ -85,15 +85,32 @@
                 box.name = "foodBox" + count;
                 box.classname = "foodBox";
                 box.id = "foodBox" + count;
-                box.style.width = "100px";
-
-
-                document.getElementById("foodSection").appendChild(box)
+                box.style.width = "150px";
+                box.style.height = "100px";
+                
+                document.getElementById("foodSection").appendChild(box);
+                var header = document.createElement("h2");
+                
+                header.innerText = type;
+                document.getElementById("foodBox"+count).appendChild(header);
+                var foodItem = document.createElement("div");
+                document.getElementById("foodBox"+count).appendChild(foodItem);
                 foodDropdown(values);
+                var servAmountLabel = document.createElement("label");
+                servAmountLabel.innerText = "Serving Size";
+                document.getElementById("foodBox"+count).appendChild(servAmountLabel);
+                var saMinus = document.createElement("button");
+                document.getElementById("foodBox"+count).appendChild(saMinus);
+                var saPlus = document.createElement("button");
+                document.getElementById("foodBox"+count).appendChild(saPlus);
+                var servAmount = document.createElement("div");
+                servAmount.id = "servAmount";
+                servAmount.innerText = "1";
+                document.getElementById("foodBox"+count).appendChild(servAmount)
 
             }
             function foodInformation(type){
-                if(type == "pCard"){
+                if(type == "Protein"){
                     Protein1()
                 }
             }
