@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-    <head>
-        <title>Meal Calories Calculator</title>
-        <link rel="stylesheet" href  = "styles.css">
-        <script type = "text/javaScript" src = "algorithm.js";></script>
-    </head>
-    <body>
-        <section id="scroll">
-            <div class="container">
-            <a><div class="card" id="pCard">
-                <img src = "assets/protein.jpg" style="height: 136px; width:100%">
-                <h2> Proteins </h2>
-            </div></a>
-            <div class="card" id= "vCard">
-                <img src = "assets/vegetables.jpg" style="height: 136px;width:100%">
-=======
 
 <head>
     <title>Meal Calories Calculator</title>
@@ -23,7 +7,7 @@
     <script type="text/javaScript" src="algorithm.js" ;></script>
 </head>
 
-<body>
+<body id = "body">
     <section id="scroll">
         <div class="container">
             <a>
@@ -34,14 +18,12 @@
             </a>
             <div class="card" id="vCard">
                 <img src="assets/vegetables.jpg" style="height: 136px;width:100%">
->>>>>>> f97df2786c556aeaf4bdfea040099c1832481102
                 <h2> Vegetables </h2>
             </div>
             <div class="card" id="fCard">
                 <img src="assets/fruits.jpg" style="width:100%">
                 <h2> Fruits </h2>
             </div>
-<<<<<<< HEAD
             <div class="card" id= "gCard">
                     <img src = "assets/grains.jpg" style="height: 136px;width:100%">
                     <h2> Grains </h2>
@@ -53,13 +35,15 @@
           </div>
         
         </section>
-        <script type = "text/javaScript">
-            var pCount = 0;
-            var vCount = 0;
+        
+</body>
+<script type = "text/javaScript">
+            var count = 0;
             var type;
             document.getElementById("pCard").onclick = function(){
                 type = "pCard";
-                values = [];
+                values = ["1","2","3","4"];
+                newDropdown(values)
             }           
             document.getElementById("vCard").onclick = function(){
                 type = "vCard";
@@ -92,39 +76,6 @@
                 }
 
                 document.getElementById("body").appendChild(select);
-=======
-            <div class="card" id="gCard">
-                <img src="assets/grains.jpg" style="height: 136px;width:100%">
-                <h2> Grains </h2>
-            </div>
-            <div class="card" id="dCard">
-                <img src="assets/dairy.jpg" style="height: 136px;width:100%">
-                <h2> Dairy </h2>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="box">
-            <h2>Category</h2>
-            <div class="item">
-                <div class="dropdown">
-
-                </div>
-            </div>
-            <div class="servingamount">
-
-            </div>
-        </div>
-        <div class="calories">
-            <h2>Total Calories</h2>
-        </div>
-    </section>
-    <script type="text/javaScript">
-            /* creating a new html element onclick
-            document.getElementById("").onclick= function(){
-                var tag = createElement("-----");
-                
->>>>>>> f97df2786c556aeaf4bdfea040099c1832481102
             }
             var a = document.getElementById("FoodChoice");
             var b = document.getElementById("ServSize");
@@ -145,6 +96,4 @@
                 console.log(Protein1(foodChoice, servingSize));
             }
         </script>
-</body>
-
 </html>
