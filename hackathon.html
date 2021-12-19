@@ -38,7 +38,7 @@
         <section id = "foodSection" style = "display:flex; flex-direction:row; flex-wrap:wrap">
             <div class="calories">
                 <h2>Total Calories</h2>
-                <table style= "flex-wrap:wrap; text-align:left">
+                <table class="table">
                     <th>Food Item</th>
                     <th>Calories</th>
                     <th>Serving Size</th>
@@ -83,6 +83,7 @@
                 var box = document.createElement("div")
                 box.name = "foodBox" + count;
                 box.classname = "foodBox";
+                box.style.marginLeft = "2.5vw";
                 box.id = "foodBox" + count;
                 box.style.width = "150px";
                 box.style.height = "100px";
@@ -119,7 +120,7 @@
                 select.name = "foodChoice" + count;
                 select.classname = "foodChoiceDropdown";
                 select.id = "foodChoice" + count;
-                select.style.width = "100px";
+                select.style.width = "10vw";
                 select.style.flexDirection = "column";
 
                 for (const val of values) {
