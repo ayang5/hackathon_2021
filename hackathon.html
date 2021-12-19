@@ -3,13 +3,18 @@
     <head>
         <title>Meal Calories Calculator</title>
         <link rel="stylesheet" href  = "styles.css">
-        <script type = "text/javaScript" src = "algorithm.js";></script>
+        <script type = "text/javaScript" src = "algorithm.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+
+        </style>
     </head>
     <body id = "body">
         <section id="scroll">
             <div class="container">
             <a><div class="card" id="pCard">
                 <img src = "assets/protein.jpg" style="height: 136px; width:100%">
+                <p id="_dropdown" style = "display:hidden"></p>
                 <h2> Proteins </h2>
             </div></a>
             <div class="card" id= "vCard">
@@ -36,7 +41,6 @@
                 <h2>Category</h2>
                 <div class="item">
                     <div class="dropdown">
-
                     </div>
                 </div>
                 <div class="servingamount">
@@ -81,6 +85,7 @@
                 var select = document.createElement("select");
                 select.name = "foodChoice" + count;
                 select.id = "foodChoice" + count;
+                select.style.width = "100px";
 
                 for (const val of values) {
                      var option = document.createElement("option");
