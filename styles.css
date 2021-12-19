@@ -86,7 +86,7 @@
   .calories {
     flex-direction: column;
     position:absolute;
-    right:0px;
+    right:20px;
     height: 200px;
     text-align: center;
     padding: 10px;
