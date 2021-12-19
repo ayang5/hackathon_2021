@@ -92,36 +92,43 @@
                 box.style.marginLeft = "2.5vw";
                 box.id = "foodBox";
                 box.style.width = "1.5vw";
-                box.style.height = "1vw";
+
                 
                 document.getElementById("foodSection").appendChild(box);
                 var header = document.createElement("h2");
-                
                 header.innerText = type;
+                header.style.marginTop = "40px";
                 document.getElementById("foodBox").appendChild(header);
                 var foodItem = document.createElement("div");
+                foodItem.style.height = "20px";
                 document.getElementById("foodBox").appendChild(foodItem);
                 foodDropdown(values);
                 var servAmountLabel = document.createElement("label");
                 servAmountLabel.innerText = "Serving Size";
                 servAmountLabel.style.position = "absolute";
                 servAmountLabel.style.left = "15vw";
-                servAmountLabel.style.marginTop = "-30px";
+                servAmountLabel.style.marginTop = "-40px";
                 document.getElementById("foodBox").appendChild(servAmountLabel);
                 var saPlus = document.createElement("button");
+                saPlus.className = "btn btn-light";
                 saPlus.id = "saPlus"+count;
                 saPlus.innerHTML = "+";
-                saPlus.style.width="1.5em";
-                saPlus.style.height="1.5em";
+                saPlus.style.padding = "0px";
+                saPlus.style.width="1.7em";
+                saPlus.style.height="1.7em";
+                saPlus.style.cursor="pointer";
                 saPlus.style.position = "absolute";
                 saPlus.style.left = "20vw";
                 saPlus.style.marginTop = "-8px";
                 document.getElementById("foodBox").appendChild(saPlus);
                 var saMinus = document.createElement("button");
                 saMinus.id = "saMinus"+count;
+                saMinus.className = "btn btn-light";
+                saMinus.style.padding = "0px";
                 saMinus.innerHTML = "-";
-                saMinus.style.width="1.5em";
-                saMinus.style.height="1.5em";
+                saMinus.style.width="1.7em";
+                saMinus.style.height="1.7em";
+                saMinus.style.cursor = "pointer";
                 saMinus.style.position = "absolute";
                 saMinus.style.left = "15vw";
                 saMinus.style.marginTop = "-8px";
@@ -129,8 +136,10 @@
                 var servAmount = document.createElement("div");
                 servAmount.id = "servAmount" + count;
                 servAmount.style.position="absolute";
-                servAmount.style.left="18vw";
-                servAmount.innerText = "1";
+                servAmount.style.left="17.8vw";
+                servAmount.id = "servAmount";
+                servAmount.innerHTML = 1;
+                servAmount.style.marginTop = "-0.5em";
                 document.getElementById("foodBox").appendChild(servAmount)
                 document.getElementById("saPlus"+count).addEventListener("click",plusSA());
                 document.getElementById("saMinus"+count).addEventListener("click",minusSA());
