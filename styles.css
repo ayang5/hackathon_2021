@@ -104,8 +104,8 @@
   }
 
   .calcButton {
-    position:relative;
-    left:80%;
-    margin-top:20em;
+    position:absolute;
+    left:90%;
+    margin-top:1em;
     cursor:pointer;
   }
