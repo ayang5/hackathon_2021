@@ -8,23 +8,23 @@
     <body>
         <section id="scroll">
             <div class="container">
-            <a><div class="card">
+            <a><div class="card" id="pCard">
                 <img src = "assets/protein.jpg" style="height: 136px; width:100%">
                 <h2> Proteins </h2>
             </div></a>
-            <div class="card">
+            <div class="card" id= "vCard">
                 <img src = "assets/vegetables.jpg" style="height: 136px;width:100%">
                 <h2> Vegetables </h2>
             </div>
-            <div class="card">
+            <div class="card" id= "fCard">
                 <img src = "assets/fruits.jpg" style="width:100%">
                 <h2> Fruits </h2>
             </div>
-            <div class="card">
+            <div class="card" id= "gCard">
                     <img src = "assets/grains.jpg" style="height: 136px;width:100%">
                     <h2> Grains </h2>
               </div>
-            <div class="card">
+            <div class="card" id= "dCard">
                     <img src = "assets/dairy.jpg" style="height: 136px;width:100%">
                     <h2> Dairy </h2>
               </div>
@@ -32,6 +32,12 @@
         
         </section>
         <script type = "text/javaScript">
+            /* creating a new html element onclick
+            document.getElementById("").onclick= function(){
+                var tag = createElement("-----");
+                
+            }
+            */
             var a = document.getElementById("FoodChoice");
             var b = document.getElementById("ServSize");
             var foodChoice;
