@@ -109,9 +109,10 @@
                 servAmountLabel.style.marginTop = "-40px";
                 document.getElementById("foodBox"+count).appendChild(servAmountLabel);
                 var saPlus = document.createElement("button");
+                saPlus.className = "btn btn-light";
                 saPlus.id = "saPlus"+count;
                 saPlus.innerHTML = "+";
-                saPlus.textAlign = "center";
+                saPlus.style.padding = "0px";
                 saPlus.style.width="1.7em";
                 saPlus.style.height="1.7em";
                 saPlus.style.cursor="pointer";
@@ -121,6 +122,8 @@
                 document.getElementById("foodBox"+count).appendChild(saPlus);
                 var saMinus = document.createElement("button");
                 saMinus.id = "saMinus"+count;
+                saMinus.className = "btn btn-light";
+                saMinus.style.padding = "0px";
                 saMinus.innerHTML = "-";
                 saMinus.style.width="1.7em";
                 saMinus.style.height="1.7em";
