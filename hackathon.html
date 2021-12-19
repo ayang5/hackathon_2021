@@ -31,13 +31,11 @@
           </div>
         
         </section>
-        <section>
+        <section id = "foodSection">
             <div class="box">
                 <h2>Category</h2>
                 <div class="item">
-                    <div class="dropdown">
 
-                    </div>
                 </div>
                 <div class="servingamount">
                     
@@ -80,6 +78,7 @@
  
                 var select = document.createElement("select");
                 select.name = "foodChoice" + count;
+                select.classname = "foodChoiceDropdown";
                 select.id = "foodChoice" + count;
 
                 for (const val of values) {
@@ -89,10 +88,12 @@
                      select.appendChild(option);
                 }
 
-                document.getElementById("body").appendChild(select);
+                document.getElementById("foodSection").appendChild(select);
             }
-            var a = document.getElementById("foodChoice");
+            for(var i = 0; i< count; i++){
+            var a = document.getElementById("foodChoice" + i);
             var b = document.getElementById("ServSize");
+            }
             var fChoice;
             var sSize;
             function calculateFood(){
