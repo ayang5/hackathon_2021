@@ -36,7 +36,7 @@
           </div>
         
         </section>
-        <section id = "foodSection">
+        <section id = "foodSection" style = "display:flex; flex-direction:row;">
             <div class="box">
                 <h2>Category</h2>
                 <div class="item">
@@ -87,6 +87,7 @@
                 select.classname = "foodChoiceDropdown";
                 select.id = "foodChoice" + count;
                 select.style.width = "100px";
+                select.style.flexDirection = "column";
 
                 for (const val of values) {
                      var option = document.createElement("option");
