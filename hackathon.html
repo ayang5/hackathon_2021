@@ -116,7 +116,7 @@
                 saMinus.style.left = "15vw";
                 saMinus.style.marginTop = "-8px";
                 document.getElementById("foodBox"+count).appendChild(saMinus);
-                document.getElementById("saMinus"+count).addEventListener("click",minusSA());
+                // document.getElementById("saMinus"+count).addEventListener("click",minusSA());
                 var saPlus = document.createElement("button");
                 saPlus.id = "saPlus"+count;
                 saPlus.innerHTML = "+";
@@ -125,12 +125,12 @@
                 saPlus.style.position = "absolute";
                 saPlus.style.left = "20vw";
                 saPlus.style.marginTop = "-8px";
-                document.getElementById("foodBox"+count).appendChild(saPlus);
-                document.getElementById("saPlus"+count).addEventListener("click",plusSa());
+                // document.getElementById("foodBox"+count).appendChild(saPlus);
+                // document.getElementById("saPlus"+count).addEventListener("click",plusSA());
                 var servAmount = document.createElement("div");
                 servAmount.id = "servAmount" + count;
                 servAmount.style.position="absolute";
-                servAmount.style.right="12vw";
+                servAmount.style.left="18vw";
                 servAmount.id = "servAmount";
                 servAmount.innerText = "1";
                 document.getElementById("foodBox"+count).appendChild(servAmount)
