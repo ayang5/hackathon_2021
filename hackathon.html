@@ -50,10 +50,14 @@
                 </table>
             </div>
         </section>
+        <button class = "button" id = "calcButton">
+            CALCULATE
+        </button>
 </body>
 <script type = "text/javaScript">
             var count = 0;
             var type;
+            var totCalories = 0;
             document.getElementById("pCard").onclick = function(){
                 type = "Protein";
                 values = ["Chicken", "Lamb", "Steak", "Beef", "Salmon", "Pork", "Egg", "Tofu"];
@@ -109,11 +113,6 @@
                 document.getElementById("foodBox"+count).appendChild(servAmount)
 
             }
-            function foodInformation(type){
-                if(type == "Protein"){
-                    Protein1()
-                }
-            }
             function foodDropdown(values) {
  
                 var select = document.createElement("select");
@@ -141,8 +140,11 @@
             function calculateFood(){
                 fChoice = a.options[a.selectedIndex].value;
                 sSize = b.options[b.selectedIndex].value;
-                console.log("hi");
-                console.log(Protein1(fChoice, sSize));
+                totCalories = totCalories + foodCalories(fChoice,Size);
+                
+            }
+            document.getElementById("calcButton").onclick = function(){
+                console.log(totCalories);
             }
         </script>
 </html>

@@ -1,5 +1,4 @@
-function Protein1(choice,serving){
-    console.log("hey");
+function FoodCalories(choice,serving){
     if(choice == "Chicken"){
         return 300*serving;
     } else if(choice == "Lamb"){
@@ -14,21 +13,13 @@ function Protein1(choice,serving){
         return 206*serving;
     } else if(choice == "Egg"){
         return 78*serving;
-    } else {
+    } else if(choice == "Tofu"){
         return 94*serving
-    }
-} 
-function Dairy1(choice,serving){
-    console.log("hey there"); 
-    if(choice == "Milk"){
+    } else if(choice == "Milk"){
         return 103*serving;
-    } else {
+    } else if(choice =="Yogurt"){
         return 100*serving;
-    }
-}
-function Veggies1(choice,serving){
-    console.log("hey there again");
-    if(choice == "Brussel Sprouts"){
+    } else if(choice == "Brussel Sprouts"){
         return 38*serving;
     } else if(choice == "Chinese Cabbage"){
         return 8*serving;
@@ -42,13 +33,9 @@ function Veggies1(choice,serving){
         return 163*serving;
     } else if(choice == "Broccoli"){
         return 45*serving;
-    } else {
+    } else if(choice == "Beans"){
         return 42*serving;
-    }
-}
-function Fruits1(choice,serving){
-    console.log("here there again again");
-    if(choice == "Apples"){
+    } else if(choice == "Apples"){
         return 95*serving;
     } else if(choice == "Oranges"){
         return 46*serving; 
@@ -62,13 +49,9 @@ function Fruits1(choice,serving){
         return 22*serving;
     } else if(choice == "Blueberries"){
         return 30*serving;
-    } else {
+    } else if(choice == "Grapes"){
         return 62*serving;
-    }
-}
-function Grains1(choice,serving){
-    console.log("here there again again again");
-    if(choice == "White Rice"){
+    } else if(choice == "White Rice"){
         return 206*serving;
     } else if(choice == "Brown Rice"){
         return 216*serving;
