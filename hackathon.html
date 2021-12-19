@@ -108,29 +108,44 @@
                 servAmountLabel.style.marginTop = "-30px";
                 document.getElementById("foodBox"+count).appendChild(servAmountLabel);
                 var saMinus = document.createElement("button");
+<<<<<<< HEAD
+                saMinus.id = "saMinus"+count;
+=======
                 saMinus.innerHTML = "-";
                 saMinus.style.width="1.5em";
                 saMinus.style.height="1.5em";
                 saMinus.style.position = "absolute";
                 saMinus.style.left = "15vw";
                 saMinus.style.marginTop = "-8px";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 document.getElementById("foodBox"+count).appendChild(saMinus);
+                document.getElementById("saMinus"+count).addEventListener("click",minusSA());
                 var saPlus = document.createElement("button");
+<<<<<<< HEAD
+                saPlus.id = "saPlus"+count;
+=======
                 saPlus.innerHTML = "+";
                 saPlus.style.width="1.5em";
                 saPlus.style.height="1.5em";
                 saPlus.style.position = "absolute";
                 saPlus.style.left = "20vw";
                 saPlus.style.marginTop = "-8px";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 document.getElementById("foodBox"+count).appendChild(saPlus);
+                document.getElementById("saPlus"+count).addEventListener("click",plusSa());
                 var servAmount = document.createElement("div");
+<<<<<<< HEAD
+                servAmount.id = "servAmount" + count;
+=======
                 servAmount.style.position="absolute";
                 servAmount.style.right="12vw";
                 servAmount.id = "servAmount";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 servAmount.innerText = "1";
                 document.getElementById("foodBox"+count).appendChild(servAmount)
 
             }
+            
             function foodDropdown(values) {
  
                 var select = document.createElement("select");
@@ -149,17 +164,24 @@
 
                 document.getElementById("foodBox"+count).appendChild(select);
             }
-            for(var i = 0; i< count; i++){
-            var a = document.getElementById("foodChoice" + i);
-            var b = document.getElementById("ServSize");
+            function minusSA(){
+                var x = parseInt(document.getElementById("servAmount"+count));
+                console.log(x);
+                document.getElementById("servAmount"+count).innerText = x-1;
             }
-            var fChoice;
-            var sSize;
+            function plusSA(){
+                var x = parseInt(document.getElementById("servAmount"+count));
+                console.log(x);
+                document.getElementById("servAmount"+count).innerText = x+1;
+            }
             function calculateFood(){
-                fChoice = a.options[a.selectedIndex].value;
-                sSize = b.options[b.selectedIndex].value;
-                totCalories = totCalories + foodCalories(fChoice,Size);
-                
+                for(var i = 0; i<count;i++){
+                    var a = document.getElementById("foodChoice" + i);
+                    var b = document.getElementById("servAmount"+ i);
+                    var fChoice= a.options[a.selectedIndex].value;;
+                    var sSize = b.options[b.selectedIndex].value;
+                    totCalories = totCalories + foodCalories(fChoice,Size);
+                } 
             }
             document.getElementById("calcButton").onclick = function(){
                 console.log(totCalories);
