@@ -86,7 +86,8 @@
   .calories {
     flex-direction: column;
     position:absolute;
-    right:5vw;
+    /* right:5vw; */
+    left:50%;
     height: 200px;
     width:40vw;
     text-align: center;
@@ -99,4 +100,10 @@
 
   .foodBox {
     width:200px;
+  }
+
+  .button {
+    position:relative;
+    left:80%;
+    margin-top:20em;
   }
