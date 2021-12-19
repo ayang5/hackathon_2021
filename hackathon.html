@@ -62,7 +62,7 @@
             }           
             document.getElementById("vCard").onclick = function(){
                 type = "vCard";
-                values = ["Brussel Sprouts", "Chinese Cabbage", "Lettuce", "Carrots", "Celery", "Potatoes","Broccoli"];
+                values = ["Brussel Sprouts", "Chinese Cabbage", "Lettuce", "Carrots", "Celery", "Potatoes","Broccoli", "Beans"];
                 newFoodItem(values);
             }
             document.getElementById("fCard").onclick = function(){
@@ -72,21 +72,23 @@
             }
             document.getElementById("dCard").onclick = function(){
                 type = "dCard";
-                values = [];
+                values = ["Milk", "Yogurt"];
                 newFoodItem(values);
             }
             document.getElementById("gCard").onclick = function(){
                 type = "gCard";
-                values = [];
+                values = ["White Rice", "Brown Rice", "Bread", "Pasta", "Quinoa"];
                 newFoodItem(values)
             }
             function newFoodItem(values){
-                var box = document.createElement("box")
+                var box = document.createElement("div")
                 box.name = "foodBox" + count;
                 box.classname = "foodBox";
                 box.id = "foodBox" + count;
+                box.style.width = 100px;
 
-                document.getElementById("foodSelection").appendChild("foodSection")
+
+                document.getElementById("foodSection").appendChild(box)
                 foodDropdown(values);
 
             }
@@ -111,7 +113,7 @@
                      select.appendChild(option);
                 }
 
-                document.getElementById("foodSection").appendChild(select);
+                document.getElementById("foodBox"+count).appendChild(select);
             }
             for(var i = 0; i< count; i++){
             var a = document.getElementById("foodChoice" + i);
