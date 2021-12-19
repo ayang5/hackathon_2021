@@ -50,9 +50,10 @@
                 </table>
             </div>
         </section>
-        <button class = "button" id = "calcButton">
+        <a href = "#"><button class = "button" id = "calcButton">
             CALCULATE
         </button>
+        </a>
 </body>
 <script type = "text/javaScript">
             var count = 0;
@@ -102,17 +103,44 @@
                 foodDropdown(values);
                 var servAmountLabel = document.createElement("label");
                 servAmountLabel.innerText = "Serving Size";
+                servAmountLabel.style.position = "absolute";
+                servAmountLabel.style.left = "15vw";
+                servAmountLabel.style.marginTop = "-30px";
                 document.getElementById("foodBox"+count).appendChild(servAmountLabel);
                 var saMinus = document.createElement("button");
+<<<<<<< HEAD
                 saMinus.id = "saMinus"+count;
+=======
+                saMinus.innerHTML = "-";
+                saMinus.style.width="1.5em";
+                saMinus.style.height="1.5em";
+                saMinus.style.position = "absolute";
+                saMinus.style.left = "15vw";
+                saMinus.style.marginTop = "-8px";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 document.getElementById("foodBox"+count).appendChild(saMinus);
                 document.getElementById("saMinus"+count).addEventListener("click",minusSA());
                 var saPlus = document.createElement("button");
+<<<<<<< HEAD
                 saPlus.id = "saPlus"+count;
+=======
+                saPlus.innerHTML = "+";
+                saPlus.style.width="1.5em";
+                saPlus.style.height="1.5em";
+                saPlus.style.position = "absolute";
+                saPlus.style.left = "20vw";
+                saPlus.style.marginTop = "-8px";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 document.getElementById("foodBox"+count).appendChild(saPlus);
                 document.getElementById("saPlus"+count).addEventListener("click",plusSa());
                 var servAmount = document.createElement("div");
+<<<<<<< HEAD
                 servAmount.id = "servAmount" + count;
+=======
+                servAmount.style.position="absolute";
+                servAmount.style.right="12vw";
+                servAmount.id = "servAmount";
+>>>>>>> 85d3924d2542e49072430f2fc4c0a96ecf5823ae
                 servAmount.innerText = "1";
                 document.getElementById("foodBox"+count).appendChild(servAmount)
 
