@@ -5,7 +5,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:60vh;
+    min-height:30vh;
     background:linear-gradient(45deg,#ffffff, #e6e6e6);
     background-attachment:fixed;
     width:100%;
@@ -24,8 +24,8 @@
    
    .container .card{
     position:relative;
-    width:200px;
-    height:200px;
+    width:250px;
+    height:250px;
     background:#fff;
     margin:20px;
     border-radius:20px;
@@ -53,12 +53,7 @@
      text-align:center;
    
    } */
-   .container .card .circle h2{
-   color:rgb(0, 0, 0);
-   font-size:2.5em;
-   padding:30px;
-   text-align:center;
-   }
+
    
    .container .card .content{
      position:absolute;
