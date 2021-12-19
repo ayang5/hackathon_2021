@@ -86,8 +86,17 @@
   .calories {
     flex-direction: column;
     position:absolute;
-    right:20px;
+    right:5vw;
     height: 200px;
+    width:40vw;
     text-align: center;
     padding: 10px;
+  }
+
+  .calories .table .th{
+    width:2vw;
+  }
+
+  .foodBox {
+    width:200px;
   }
