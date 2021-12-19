@@ -36,17 +36,12 @@
         
         </section>
         <section id = "foodSection" style = "display:flex; flex-direction:row; flex-wrap:wrap">
-            <div class="calories">
+            <div class="calories" id = "calories">
                 <h2>Total Calories</h2>
                 <table class="table" id = "table">
                     <th>Food Item</th>
                     <th>Calories</th>
                     <th>Serving Size</th>
-                    <tr>
-                        <td>Item 1</td>
-                        <td>Calories#</td>
-                        <td>Size</td>
-                    </tr>
                 </table>
             </div>
         </section>
@@ -177,38 +172,47 @@
                 console.log(x);
                 document.getElementById("servAmount"+g).innerHTML = x;
             }
-            function calculateFood(){
-                for(let i = 0; i<count;i++){
-                    var a = document.getElementById("foodChoice" + i);
-                    var sSize = document.getElementById("servAmount"+ i);
-                    var fChoice= a.options[a.selectedIndex].value;
-                    totCalories = totCalories + foodCalories(fChoice,sSize);
-                } 
-            }
-
             document.getElementById("calcButton").onclick = function(){
-                console.log(count);
-                for(let i = 0; i< count; i++){
-                    var a = document.getElementById("foodChoice" + i);
-                    var b = document.getElementById("servAmount"+ i);
-                    var fChoice= a.options[a.selectedIndex].text;
-                    var sSize = document.getElementById("servAmount"+i);
+                
+                var elmtTable = document.getElementById("table");
+                var tableRows = elmtTable.getElementsByTagName("tr");
+                var rowCount = tableRows.length;
+                if(rowCount>1){
+                    document.getElementById("finalCount").remove();
+                }
+                for (var x=rowCount-1; x>0; x--) {
+                    elmtTable.removeChild(tableRows[x]);
+                }
+                totCalories = 0;
+                for(let i = 1; i< count+1; i++){
+                    console.log("hi");
+                    var select = document.getElementById("foodChoice" + i);
+                    var fChoice= select.options[select.selectedIndex].text;
+                    console.log(fChoice);
+                    var sSize = document.getElementById("servAmount"+i).innerHTML;
+                    console.log(sSize);
                     var newRow = document.createElement("tr");
-                    newRow.id = "Row "+x;
+                    newRow.id = "Row"+i;
+                    console.log(newRow.id);
                     document.getElementById("table").appendChild(newRow);
                     for(let j = 0;j<3;j++){
                     var item = document.createElement("td");
                     if(j == 0){
-                        item.innerHTML = fChoice;
+                        item.innerText = fChoice;
                     } else if(j==1){
-                        item.innerHTML = FoodCalories(fChoice,1);
+                        item.innerText = FoodCalories(fChoice,1);
+                        totCalories = totCalories + FoodCalories(fChoice,sSize)
                     } else {
-                        item.innerHTML = sSize
+                        item.innerText = sSize
                     }
-                    document.getElementById("Row" + x).appendChild(item);
+                    document.getElementById("Row" + i).appendChild(item);
                     console.log("hi");
                     }    
                 }
+                var finalCount = document.createElement("h2");
+                finalCount.innerText = totCalories;
+                finalCount.id="finalCount";
+                document.getElementById("calories").appendChild(finalCount);
                 console.log(totCalories);
             }
         </script>
