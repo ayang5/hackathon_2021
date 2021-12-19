@@ -5,7 +5,7 @@
         <link rel="stylesheet" href  = "styles.css">
         <script type = "text/javaScript" src = "algorithm.js";></script>
     </head>
-    <body>
+    <body id = "body">
         <section id="scroll">
             <div class="container">
             <a><div class="card" id="pCard">
@@ -44,14 +44,17 @@
             document.getElementById("vCard").onclick = function(){
                 type = "vCard";
                 values = [];
+                newDropdown(values);
             }
             document.getElementById("fCard").onclick = function(){
                 type = "fCard";
                 values = [];
+                newDropdown(values);
             }
             document.getElementById("dCard").onclick = function(){
                 type = "dCard";
                 values = [];
+                newDropdown(values);
             }
             document.getElementById("gCard").onclick = function(){
                 type = "gCard";
