@@ -8,12 +8,13 @@
     min-height:60vh;
     background:linear-gradient(45deg,#ffffff, #e6e6e6);
     background-attachment:fixed;
-    max-width:100%;
+    width:100%;
    }
    
    .container{
      position:relative;
-     max-width:100%;
+     max-width:2000px !important;
+     width:100%;
      padding:20px;
      display:flex;
      justify-content: center;
@@ -126,15 +127,3 @@
     text-align: center;
     padding: 10px;
   }
-   .container .card:nth-child(1) .circle,
-   .container .card:nth-child(1) .content a{
-     background: rgb(128, 195, 240);
-   }
-   .container .card:nth-child(2) .circle ,
-   .container .card:nth-child(2) .content a{
-     background: rgb(133, 152, 214)
-   }
-   .container .card:nth-child(3) .circle ,
-   .container .card:nth-child(3) .content a{
-     background: #67b990;
-   }
